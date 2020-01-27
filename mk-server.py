@@ -56,7 +56,7 @@ def task3_post():
 # task 4
 @app.route('/task4', methods=['GET'])
 def task4_get():
-    browser = request.cookies.get('User-Agent', None)
+    browser = request.headers.get('User-Agent', None)
     if browser == "LupaBrowser v1.1":
         return flags[3]
     return "This site works only in <i>LupaBrowser v1.1</i>..."
@@ -86,7 +86,7 @@ def task6_post():
     if guess == number:
         return redirect('/task6?flag=' + flags[5])
 
-    return redirect('/task6')
+    return redirect('/task6?flag=No')
 
 
 app.run(host='0.0.0.0', port=2020)
