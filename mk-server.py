@@ -80,7 +80,7 @@ def task6_get():
 
 @app.route('/task6', methods=['POST'])
 def task6_post():
-    number = str(random.randint(1, 40))
+    number = str(random.randint(1, 100))
     guess = request.form.get('number', '0')
 
     if guess == number:
