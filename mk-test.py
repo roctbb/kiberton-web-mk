@@ -1,6 +1,6 @@
 import requests
 
-HOST = "http://127.0.0.1:2020"
+HOST = "http://45.143.94.76:2020"
 
 #task 1
 response = requests.post(HOST + '/task1')
